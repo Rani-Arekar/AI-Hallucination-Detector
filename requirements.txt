@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-dotenv
+numpy
+pydantic
+ddgs
+google-genai
+sqlalchemy
+alembic
+
+# testing
+pytest
+pytest-asyncio
+httpx

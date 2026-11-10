@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-bg: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-ink: #151a21;
+  --color-ink-muted: #5b6472;
+  --color-ink-faint: #8991a0;
+  --color-border: #e1e4ea;
+  --color-border-strong: #c9cdd6;
+
+  --color-verify: #1f7a5c;
+  --color-verify-bg: #e9f3ee;
+  --color-risk: #b3432b;
+  --color-risk-bg: #f7e9e5;
+  --color-caution: #93650a;
+  --color-caution-bg: #f6efe0;
+  --color-neutral: #5b6472;
+  --color-neutral-bg: #eceef1;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+/* Visible keyboard focus everywhere, not just default browser outline styling swallowed by resets */
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.answer-content {
+  line-height: 1.7;
+  color: #475569;
+}
+
+.answer-content p {
+  margin: 0 0 14px;
+}
+
+.answer-content strong {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.answer-content ul {
+  margin: 8px 0 14px 20px;
+  padding-left: 18px;
+}
+
+.answer-content li {
+  margin-bottom: 6px;
+}
